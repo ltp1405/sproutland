@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dv0u67jsyb1qg"]
+
+[ext_resource type="Script" uid="uid://bkytmg2yo6vq" path="res://scenes/bush.gd" id="1_ehqem"]
+[ext_resource type="Texture2D" uid="uid://dilnijxpd8l5a" path="res://assets/Objects/Trees, stumps and bushes.png" id="1_lad4k"]
+[ext_resource type="Texture2D" uid="uid://b505iwwaan4pa" path="res://resources/red_berry_texture.tres" id="3_tu87o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehqem"]
+atlas = ExtResource("1_lad4k")
+region = Rect2(16, 47, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tu87o"]
+radius = 4.1231055
+
+[node name="Bush" type="StaticBody2D"]
+y_sort_enabled = true
+script = ExtResource("1_ehqem")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_ehqem")
+offset = Vector2(0, -4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tu87o")
+
+[node name="Berries" type="Node2D" parent="."]
+
+[node name="Berry1" type="Sprite2D" parent="Berries"]
+position = Vector2(-4, 0)
+
+[node name="Berry2" type="Sprite2D" parent="Berries"]
+position = Vector2(3, -3)
+
+[node name="Berry3" type="Sprite2D" parent="Berries"]
+position = Vector2(-1, -7)
+texture = ExtResource("3_tu87o")

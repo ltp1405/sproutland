@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://u0utnn6q7thc"]
+
+[ext_resource type="Script" uid="uid://deqqsjcg2ltql" path="res://scripts/crop.gd" id="1_fe780"]
+[ext_resource type="SpriteFrames" uid="uid://blwu8mavgqt5b" path="res://resources/crops/eggplant_stages.tres" id="2_fe780"]
+[ext_resource type="Resource" uid="uid://bymc7l3ka5ijx" path="res://resources/crops/eggplant.tres" id="2_pfmy0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fe780"]
+radius = 4.1231055
+
+[node name="Crop" type="Area2D"]
+script = ExtResource("1_fe780")
+data = ExtResource("2_pfmy0")
+stage = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fe780")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_fe780")
+centered = false
+offset = Vector2(-8, -12)

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cidyyylccm7fy"]
+
+[ext_resource type="Script" uid="uid://crmp0o18acmpt" path="res://scripts/axe.gd" id="1_725vr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_725vr"]
+radius = 4.1231055
+
+[node name="Axe" type="Node2D"]
+script = ExtResource("1_725vr")
+
+[node name="ToolHitbox" type="Area2D" parent="."]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToolHitbox"]
+shape = SubResource("CircleShape2D_725vr")
+
+[connection signal="body_entered" from="ToolHitbox" to="." method="_on_tool_hitbox_body_entered"]

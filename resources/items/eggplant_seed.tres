@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SeedData" load_steps=5 format=3 uid="uid://cqgyfxtahix81"]
+
+[ext_resource type="Script" uid="uid://b6hfdbrhjrvoh" path="res://scripts/seed_data.gd" id="1_bet6l"]
+[ext_resource type="Resource" uid="uid://bymc7l3ka5ijx" path="res://resources/crops/eggplant.tres" id="1_o2r1l"]
+[ext_resource type="Texture2D" uid="uid://dp3uwcrbhsqwc" path="res://assets/Objects/Items/items-spritesheet.png" id="2_o2r1l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2jp7"]
+atlas = ExtResource("2_o2r1l")
+region = Rect2(0, 80, 16, 16)
+
+[resource]
+script = ExtResource("1_bet6l")
+crop_data = ExtResource("1_o2r1l")
+name = "Eggplant Seed"
+texture = SubResource("AtlasTexture_s2jp7")
+metadata/_custom_type_script = "uid://dmtsgwvqd446j"

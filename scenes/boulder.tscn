@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://ksdgptm0p1c6"]
+
+[ext_resource type="Texture2D" uid="uid://oca6ahhgve8f" path="res://resources/boulder_texture_2.tres" id="1_7lox5"]
+[ext_resource type="Script" uid="uid://ffditurardit" path="res://scripts/boulder.gd" id="1_wye2t"]
+[ext_resource type="Texture2D" uid="uid://bqpsq4jq6uyw4" path="res://resources/boulder_texture_1.tres" id="2_7lox5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_475t6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7lox5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7lox5")
+}],
+"loop": true,
+"name": &"with_moss",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7lox5"]
+
+[node name="Boulder" type="StaticBody2D"]
+script = ExtResource("1_wye2t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_475t6")
+animation = &"with_moss"
+offset = Vector2(0, -6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_7lox5")

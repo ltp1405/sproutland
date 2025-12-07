@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://b505iwwaan4pa"]
+
+[ext_resource type="Texture2D" uid="uid://dilnijxpd8l5a" path="res://assets/Objects/Trees, stumps and bushes.png" id="1_w561x"]
+
+[resource]
+atlas = ExtResource("1_w561x")
+region = Rect2(6, 69, 4, 4)

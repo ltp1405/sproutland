@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CropData" load_steps=3 format=3 uid="uid://bymc7l3ka5ijx"]
+
+[ext_resource type="Script" uid="uid://cxh672y4m5pv3" path="res://scripts/crop_data.gd" id="1_c7e7r"]
+[ext_resource type="SpriteFrames" uid="uid://blwu8mavgqt5b" path="res://resources/crops/eggplant_stages.tres" id="2_jtpce"]
+
+[resource]
+script = ExtResource("1_c7e7r")
+stages = ExtResource("2_jtpce")
+grow_steps = Array[int]([3, 3, 5])
+metadata/_custom_type_script = "uid://cxh672y4m5pv3"

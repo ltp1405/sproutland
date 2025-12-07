@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bg3h0srqr3mmx"]
+
+[ext_resource type="Texture2D" uid="uid://d3o1cuusbjkoa" path="res://assets/Tilesets/Building parts/Animal Structures/Chikcen_Houses.png" id="1_l0net"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhxxq"]
+atlas = ExtResource("1_l0net")
+region = Rect2(65, 0, 62, 75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0net"]
+size = Vector2(44, 28)
+
+[node name="ChickenHouse" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_yhxxq")
+offset = Vector2(0, -26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_l0net")

@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://byyq1r7cb0x4u"]
+
+[ext_resource type="Script" uid="uid://b7xbgvasphfr6" path="res://scripts/pepple.gd" id="1_0fjtu"]
+[ext_resource type="Texture2D" uid="uid://dklb06e1a66xx" path="res://assets/Objects/Mushrooms, Flowers, Stones.png" id="1_03ee7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fjtu"]
+atlas = ExtResource("1_03ee7")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_losdr"]
+atlas = ExtResource("1_03ee7")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlplq"]
+atlas = ExtResource("1_03ee7")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikguw"]
+atlas = ExtResource("1_03ee7")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_av8uj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fjtu")
+}],
+"loop": true,
+"name": &"normal1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_losdr")
+}],
+"loop": true,
+"name": &"normal2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlplq")
+}],
+"loop": true,
+"name": &"small",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikguw")
+}],
+"loop": true,
+"name": &"tiny",
+"speed": 5.0
+}]
+
+[node name="Pepple" type="Node2D"]
+script = ExtResource("1_0fjtu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_av8uj")
+animation = &"small"
+offset = Vector2(0, -2)

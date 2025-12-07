@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://blwu8mavgqt5b"]
+
+[ext_resource type="Texture2D" uid="uid://chums1ip2bvtj" path="res://assets/Objects/Farming Plants.png" id="1_ayoep"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtpce"]
+atlas = ExtResource("1_ayoep")
+region = Rect2(0, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1nnm"]
+atlas = ExtResource("1_ayoep")
+region = Rect2(16, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dydv"]
+atlas = ExtResource("1_ayoep")
+region = Rect2(32, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgp48"]
+atlas = ExtResource("1_ayoep")
+region = Rect2(48, 80, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtpce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1nnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dydv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgp48")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

@@ -1,0 +1,8 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://kdvc5lok3ggh"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6esjw"]
+load_path = "res://.godot/imported/Mushrooms, Flowers, Stones.png-7eec9a8fa2925be6f8bf7ef5eef4de17.ctex"
+
+[resource]
+atlas = SubResource("CompressedTexture2D_6esjw")
+region = Rect2(101, 27, 22, 19)
